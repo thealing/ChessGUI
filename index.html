@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Stockfish Test</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="input-container">
+		<label for="contemptInput">Contempt:</label>
+		<input id="contemptInput" type="number" value="24" />
+		<label for="skillLevelInput">Skill Level:</label>
+		<input id="skillLevelInput" type="number" value="20" />
+		<label for="maximumErrorInput">Maximum Error:</label>
+		<input id="maximumErrorInput" type="number" value="200" />
+		<label for="probabilityInput">Probability:</label>
+		<input id="probabilityInput" type="number" value="128" />
+		<label for="depthInput">Depth:</label>
+		<input id="depthInput" type="number" value="10" />
+		<label for="sideInput">Side:</label>
+		<input id="sideInput" type="number" value="0" />
+		<button onclick="onNewGameButtonClicked()">New Game</button>
+		<button onclick="onUndoButtonClicked()">Undo</button>
+		<button onclick="onExportButtonClicked()">Export PGN To Clipboard</button>
+	</div>
+	<div class="board" id="board">
+	</div>
+	<script src="js/stockfish.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
