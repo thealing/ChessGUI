@@ -50,8 +50,8 @@ function onLoaded() {
 	generateBoard();
 	onUpdate();
 	onNewGameButtonClicked();
-  const zoom = Math.min(document.documentElement.clientWidth / 900.0, document.documentElement.clientHeight / 550.0);
-  document.body.style.transform = `scale(${zoom})`;
+	const zoom = Math.min(document.documentElement.clientWidth / 900.0, document.documentElement.clientHeight / 550.0);
+	document.body.style.transform = `scale(${zoom})`;
 }
 
 function onUpdate() {
