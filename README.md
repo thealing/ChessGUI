@@ -1,5 +1,5 @@
 # Chess GUI
-This is a static website where you can play against the Stockfish chess engine. I made this just to be able to fine-tune the engine parameters for a human-like play.
+This is a static website where you can play against the Stockfish chess engine. I made this just to be able to fine-tune the engine parameters. The configuration is saved in local storage.
 
 Hosted at: https://chessgui.netlify.app
 
