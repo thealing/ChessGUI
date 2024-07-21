@@ -97,7 +97,10 @@ function onSquareClicked(event) {
 	const clickedSquareElement = event.target;
 	const clickedSquare = parseInt(event.target.id.split("_")[1]);
 	if (selectedSquare == -1) {
-		selectedSquare = clickedSquare;
+		const clickedPiece = board[clickedSquare];
+		if (clickedPiece != " " && (side == 0 && clickedPiece != " " && clickedPiece == clickedPiece.toUpperCase() || side == 1 && clickedPiece == clickedPiece.toLowerCase())) {
+			selectedSquare = clickedSquare;
+		}
 	}
 	else {
 		if (clickedSquare != selectedSquare) {
@@ -155,11 +158,16 @@ function draw() {
 function drawSquares() {
 	for (let i = 0; i < 64; i++) {
 		const squareElement = document.getElementById("square_" + i);
+		squareElement.classList.remove("highlighted");
+		squareElement.classList.remove("selected");
+		if (moves.length > 0) {
+			const [src, dst] = parseMove(moves[moves.length - 1]);
+			if (i == src || i == dst) {
+				squareElement.classList.add("highlighted");
+			}
+		}
 		if (i == selectedSquare) {
 			squareElement.classList.add("selected");
-		}
-		else {
-			squareElement.classList.remove("selected");
 		}
 	}
 }

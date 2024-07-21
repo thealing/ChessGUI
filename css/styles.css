@@ -33,6 +33,10 @@ body {
 	background-color: #b58863;
 }
 
+.square.highlighted {
+	background-color: #ffd700;
+}
+
 .square.selected {
 	background-color: #76b563;
 }
